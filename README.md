@@ -1,7 +1,7 @@
 # ZadanieRekrutacyjneDisplate
 test sciezki sprzedazowej z usa na potrzeby rekrutacji
 
-Aby uruchomic test nalezy:
+Aby uruchomic test potrzebujemy:
 - Python (tworzone na 3.7.2)
 - pip dla zainstalowania selenium i behave
 - selenium - pip install selenium
