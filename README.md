@@ -6,7 +6,7 @@ Aby uruchomic test potrzebujemy:
 - pip dla zainstalowania selenium i behave
 - selenium - pip install selenium
 - behave - pip install behave
-- chromedriver dodany do zmiennych srodowiskowych (PATH)
+- zainstalowanej przegladarki chrome oraz chromedriver dodany do zmiennych srodowiskowych (PATH)
 - ustawic sie w terminalu na folderze displaiotesty i wpisac --> behave features/zadanierekrutacyjne.feature
 
 
@@ -18,6 +18,6 @@ Tresc zadania jest w pliku zadanierekrutacyjne.feature
 
 Dlaczego behave?
 - BDD - jest calkiem zrozumiale dla "biznesu" czy innych osob nietechnicznych, scenariusze moga byc pisane przez osoby nie znajace "bebechow"
-- latwo wpiac takie testy do browserstacka/crossbrowsertesting czy innych podonych (docelowo tak bym proponowal zrobic)
+- latwo wpiac takie testy do browserstacka/crossbrowsertesting czy innych podonych (docelowo tak bym proponowal zrobic, latwiej utrzymac sterowniki, latwa obsluga roznych przegladarek itp)
 - jest czytelniejszy niz samo selenium
 - mialem wczesniej stycznosc ;)
