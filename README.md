@@ -7,7 +7,7 @@ Aby uruchomic test potrzebujemy:
 - selenium - pip install selenium
 - behave - pip install behave
 - chromedriver dodany do zmiennych srodowiskowych (PATH)
-- ustawic sie w terminalu na folderze ZadanieRekrutacyjneDisplate i wpisac --> behave features/zadanierekrutacyjne.feature
+- ustawic sie w terminalu na folderze displaiotesty i wpisac --> behave features/zadanierekrutacyjne.feature
 
 
 Po poprawnym skonfigurowaniu test powinien trwac okolo 15-20 sekund
