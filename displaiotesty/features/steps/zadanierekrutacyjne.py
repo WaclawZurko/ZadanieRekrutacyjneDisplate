@@ -38,6 +38,7 @@ def click_at_first_product(context):
 
 @then('we should land on product page')
 def assert_product_page(context):
+	WebDriverWait(context.driver, 15).until(EC.visibility_of_element_located((By.XPATH, BREADCRUMBS_PRODUCTPAGE)))
 	assert context.driver.find_element_by_xpath(BREADCRUMBS_PRODUCTPAGE).is_displayed()
 
 @when('we select product frame')
