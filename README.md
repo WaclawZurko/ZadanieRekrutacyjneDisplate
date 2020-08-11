@@ -9,5 +9,7 @@ Aby uruchomic test potrzebujemy:
 - chromedriver dodany do zmiennych srodowiskowych (PATH)
 - ustawic sie w terminalu na folderze ZadanieRekrutacyjneDisplate i wpisac --> behave features/zadanierekrutacyjne.feature
 
+
 Po poprawnym skonfigurowaniu test powinien trwac okolo 15-20 sekund
+
 Dla lepszej czytelnosci zadania nie dodawalem trybu headless
