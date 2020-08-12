@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
+
 COOKIES_BUTTON = '//*[@id="cookie-alert-container"]/div/button'
 FIRST_PRODUCT_HOMEPAGE = '//*[@id="homepage-feed"]/div/div[1]/div/div/div/div/div/div[1]'
 BREADCRUMBS_PRODUCTPAGE = '//*[@id="react-product-page"]/div/div[1]/div[1]'
