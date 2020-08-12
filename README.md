@@ -8,7 +8,7 @@ Aby uruchomic test potrzebujemy:
 - behave - pip install behave
 - zainstalowanej przegladarki chrome oraz chromedriver dodany do zmiennych srodowiskowych (PATH)
 - ustawic sie w terminalu na folderze displaiotesty i wpisac --> behave features/zadanierekrutacyjne.feature
-
+(alternatywnie mozna odpalic "behave -f allure_behave.formatter:AllureFormatter -o outputlogs ./features" zeby wygenerowac raport z allure)
 
 Po poprawnym skonfigurowaniu test powinien trwac okolo 15-20 sekund
 
