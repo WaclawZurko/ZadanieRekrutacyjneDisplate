@@ -23,7 +23,7 @@ PROMO_CODE_TOPBAR = '//*[@id="main-menu"]/nav/div[1]/div/div[2]/span[2]/strong[3
 OPEN_DISCOUNT_INPUT = '//*[@id="cart-container"]/form/div[2]/div[1]/div[6]/div/div[1]'
 OLD_SUBTOTAL = '//*[@id="cart-container"]/form/div[1]/div[1]/div[2]/div[2]/div/div[3]/div/span[2]'
 NEW_SUBTOTAL = '//*[@id="cart-container"]/form/div[1]/div[1]/div[2]/div[2]/div/div[3]/div/span[3]'
-
+FREE_SHIPING = '//*[@id="shipment-amount"]'
 
 @given('we start at homepage')
 def open_homepage(context):
@@ -97,10 +97,15 @@ def use_topbar_promocode(context):
 	promocode_input = context.driver.find_element_by_id('discount-code')
 	promocode_input.clear()
 	promocode_input.send_keys(promocode)
+	sleep(1)
 	context.driver.find_element_by_id('discount-apply').click()
 
-@then('we should see price has changed')
+@then('we should see price or free shipping has changed')
 def assert_price_has_changed(context):
-	WebDriverWait(context.driver, 15).until(EC.visibility_of_element_located((By.XPATH, NEW_SUBTOTAL)))
-	assert context.driver.find_element_by_xpath(OLD_SUBTOTAL).is_displayed()
-	assert context.driver.find_element_by_xpath(NEW_SUBTOTAL).is_displayed()
+	try:
+		WebDriverWait(context.driver, 15).until(EC.visibility_of_element_located((By.XPATH, NEW_SUBTOTAL)))
+		assert context.driver.find_element_by_xpath(NEW_SUBTOTAL).is_displayed()
+	except:
+			WebDriverWait(context.driver, 15).until(EC.visibility_of_element_located((By.XPATH, FREE_SHIPING)))
+			assert context.driver.find_element_by_xpath(OLD_SUBTOTAL).is_displayed()
+	

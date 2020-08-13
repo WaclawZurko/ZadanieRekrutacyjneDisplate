@@ -22,4 +22,4 @@ Scenario: customer track for usa with discount
 	When we change country to united states
 	Then we should see proper country
 	When we use promo code from topbar
-	Then we should see price has changed 
+	Then we should see price or free shipping has changed 
